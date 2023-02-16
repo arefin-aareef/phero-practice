@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*  Grid Area Define  */
+
+        .header {
+            grid-area: header;
+        }
+        .nav {
+            grid-area: nav;
+        }
+        .main {
+            grid-area: main;
+        }
+        .aside {
+            grid-area: aside;
+        }
+        .ad {
+            grid-area: ad;
+        }
+        .footer {
+            grid-area: footer;
+        }
+
+        /*  Grid Layout  */
+
+        .container {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr 4fr 1fr;
+            grid-template-areas: 
+            "header  header header"
+            "nav         main    aside"
+            "nav         main    ad"
+            "footer  footer footer"
+            ;
+        }
+
+        .header, .nav, .main, .aside, .ad, .footer {
+            background-color: aqua;
+        }
+
+        @media screen and (max-width:576px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                "header"
+                "nav"
+                "main"
+                "aside"
+                "ad"
+                "footer"
+                ;
+            }
+        }
+
+        @media screen and (min-width:577px) and (max-width:992px) {
+            .container {
+                grid-template-columns: 1fr 2fr;
+                grid-template-areas: 
+                "header header"
+                "nav nav"
+                "aside main"
+                "ad footer"
+                ;
+            }
+        }
+
+
+    </style>
+</head>
+<body class="container">
+    <header class="header">
+        <h3>Header</h3>
+    </header>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="">Nav-1</a></li>
+            <li><a href="">Nav-2</a></li>
+            <li><a href="">Nav-3</a></li>
+        </ul>
+    </nav>
+
+    <main class="main">
+        <article>
+            <h3>Article-1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fuga ex qui voluptatem fugit nobis alias porro. Officia eaque ipsa velit magni, id odio provident ipsum accusantium natus temporibus consectetur non alias, eum, vel commodi incidunt enim necessitatibus itaque similique! Eum, eius! Velit eos voluptas distinctio dolore unde neque ut!</p>
+        </article>
+        <article>
+            <h3>Article-2</h3>
+            <p>Beatae non quas iusto dolorum fuga vero voluptate illo quod architecto laborum velit, magni animi at, obcaecati tempore autem odio? Excepturi numquam quae sequi alias deleniti optio obcaecati error nulla reiciendis ex. Cumque accusantium temporibus perferendis autem rem aut itaque, nesciunt praesentium expedita quos placeat tempore debitis dignissimos nihil doloribus!</p>
+        </article>
+    </main>
+
+    <aside class="aside">
+        <h3>Sidebar</h3>
+        <ul>
+            <li><a href="">side-1</a></li>
+            <li><a href="">side-2</a></li>
+            <li><a href="">side-3</a></li>
+        </ul>
+    </aside>
+
+    <div class="ad">
+        <h3>Advertise</h3>
+    </div>
+
+    <footer class="footer">
+        <p>Footer</p>
+    </footer>
+</body>
+</html>

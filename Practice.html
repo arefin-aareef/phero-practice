@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		
+	</head>
+	<body>
+		<ul>
+			<li><a href="">Home</a></li>
+			<li><a href="">Store</a></li>
+			<li><a href="">Gallary</a></li>
+			<li><a href="">About Us</a></li>
+		</ul>
+		<h1 id="store">This Is Your Motorcycle Store</h1>
+
+		<center><iframe id="bike" src="Store.html" title="Iframe Example"></iframe></center>
+
+
+		<table style="width:100%">
+			<caption><b>Bike <span style="color:rgb(165, 248, 248)">Manufacturer</span></b></caption> 
+			<tr style="height:30px">
+				<th colspan="2">Company & Country</th>
+				<th>Year</th>
+			</tr>
+			<tr>
+				<td>Honda</td>
+				<td>Japan</td>
+				<td>1920</td>
+			</tr>
+			<tr>
+				<td>Bajaj</td>
+				<td>India</td>
+				<td>1950</td>
+			</tr>	
+		</table><br>
+		<div class="company">
+			<h2>Honda</h2>
+			<p>Honda is a <span class="color">JAPANI</span> company</p>
+		</div>
+		<div class="company">
+			<h2>Bajaj</h2>
+			<p>Bajaj is a <span class="color">INDIAN</span> company</p>
+		</div>
+
+
+		
+		<p>This is pragraph</p>
+		<p><a href="mailto:arefin.aareef@gmail.com">Send Email</a></p>
+		<button onclick="document.location='store.html'">Bike Store</button>
+		
+		<p><span class="color company">Description List</span></p>
+		<dl>
+			<dt>Honda</dt>
+			<dd>Made in Japan</dd>
+			<dt>Bajaj</dt>
+			<dd>Made in India</dd>
+		</dl>
+		
+		<button type="button" onclick="myName()">Click me!</button>
+		<p id="fname">Click for full name</p>
+		
+		<img id="bikeMode" src="wheelie.jpg" width="150px" >
+		<p>
+		<button type="button" onclick="bike(0)">Standing</button>
+		<button type="button" onclick="bike(1)">Wheelie</button>
+		</p>
+		<script>
+			function myName() {
+				document.getElementById("fname").innerHTML = "Kazi Samsul Arefin";
+				document.getElementById("fname").style.fontSize = "25px";
+			}
+			function bike(mode) {
+				var pic;
+				if (mode == 0) {
+					pic = "standing.jpg"
+				} else {
+					pic = "wheelie.jpg"
+				}
+				document.getElementById(bikeMode).src = pic;
+			}
+		</script>
+		<hr>
+		<p>Enter Full Name:</p>
+		<input type="text">
+		<p>Enter Password:</p>
+		<input type="password">
+		<hr>
+
+		<p>Choose your gender</p>
+		<input type="radio">Male
+		<input type="radio">Female
+		<hr>
+
+		<p>Choose your city</p>
+		<select>
+			<option value="dhaka">Dhaka</option>
+			<option>Khulna</option>
+			<option>Jessore</option>
+		</select>
+		<input type="submit">
+		<br>
+		<textarea cols="100" rows="5">Write Your Opinion Here</textarea>
+
+	</body>
+</html>
