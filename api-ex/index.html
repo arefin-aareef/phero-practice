@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Examples</title>
+    <style>
+        #all-countries{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+        .country{
+            border: 2px solid tomato;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Kanye Quotes API</h1>
+        <blockquote id="quote"></blockquote>
+        <button onclick="loadQuote()">Refresh</button>
+    </section>
+    <hr>
+    <section>
+        <h1>Random User API</h1>
+        <h2>Name: <span id="name"></span></h2>
+        <h2>Gender: <span id="gender"></span></h2>
+        <img id="picture" src="" alt=""><br>
+        <button onclick="loadUser()">Reload</button>
+    </section>
+    <hr>
+    <section>
+        <h1>REST Countries API</h1>
+        <section id="country-detail">
+        
+        </section>
+        <div id="all-countries">
+
+        </div>
+    </section>
+
+    
+
+    <script src="js/countries.js"></script>
+    <script src="js/random.js"></script>
+    <script src="js/quotes.js"></script>
+</body>
+</html>
